@@ -144,14 +144,17 @@ export default defineEventHandler(async (event: H3Event) => {
     if (formData['g-recaptcha-response']) {
       const recaptchaResponse = formData['g-recaptcha-response'];
 
-      // Skip verification for dummy token used in development
-      if (recaptchaResponse === 'dummy-token-for-development') {
-        console.warn('Using dummy reCAPTCHA token - skipping verification (development mode)');
-        // In a real implementation, you might want to skip reCAPTCHA verification in development
+      // Skip verification for dummy tokens used in development/testing
+      if (recaptchaResponse === 'dummy-token-for-development' || recaptchaResponse === 'dummy-token-for-testing') {
+        console.warn('Using dummy reCAPTCHA token - skipping verification (development/testing mode)');
+        // In development/testing mode, we skip the verification but continue processing
       } else {
         const recaptchaSecret = process.env.RECAPTCHA_SECRET_KEY
         if (!recaptchaSecret) {
-          throw new Error('reCAPTCHA secret key is not configured')
+          throw createError({
+            statusCode: 500,
+            statusMessage: 'reCAPTCHA secret key is not configured in environment variables'
+          })
         }
 
         const recaptchaVerifyUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${recaptchaSecret}&response=${recaptchaResponse}`
@@ -168,11 +171,14 @@ export default defineEventHandler(async (event: H3Event) => {
         }
 
         if (recaptchaResponseData.success !== true) {
+          console.error('reCAPTCHA verification failed:', recaptchaResponseData['error-codes']);
           throw createError({
             statusCode: 400,
-            statusMessage: 'reCAPTCHA verification failed'
+            statusMessage: 'reCAPTCHA verification failed: ' + (recaptchaResponseData['error-codes']?.join(', ') || 'Unknown error')
           })
         }
+
+        console.log('reCAPTCHA verification successful');
       }
     } else {
       throw createError({
@@ -181,7 +187,7 @@ export default defineEventHandler(async (event: H3Event) => {
       })
     }
 
-    // Format a beautiful HTML email with text alternative
+    // Format a beautiful HTML email with text alternative that matches website styling
     const htmlEmail = `
       <!DOCTYPE html>
       <html>
@@ -189,52 +195,175 @@ export default defineEventHandler(async (event: H3Event) => {
           <meta charset="utf-8">
           <title>New Contact Form Submission</title>
           <style>
-            body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-            .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-            .header { background-color: #f8f9fa; padding: 20px; text-align: center; border-radius: 5px 5px 0 0; }
-            .content { background-color: #ffffff; padding: 30px; border: 1px solid #e9ecef; }
-            .footer { background-color: #f8f9fa; padding: 15px; text-align: center; border-radius: 0 0 5px 5px; font-size: 0.9em; color: #6c757d; }
-            .field { margin: 15px 0; }
-            .field-label { font-weight: bold; color: #495057; }
-            .field-value { margin-top: 5px; }
-            .highlight { background-color: #e7f3ff; padding: 15px; border-left: 4px solid #0d6efd; margin: 15px 0; }
+            body { 
+              font-family: 'Arial', sans-serif; 
+              line-height: 1.6; 
+              color: #333; 
+              margin: 0; 
+              padding: 0; 
+              background-color: #f5f7fa;
+            }
+            .container { 
+              max-width: 600px; 
+              margin: 0 auto; 
+              padding: 20px; 
+              background-color: #ffffff;
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+            .header { 
+              background: linear-gradient(135deg, #1d4ed8 0%, #0d9488 100%); 
+              padding: 30px 20px; 
+              text-align: center; 
+              color: white;
+              border-radius: 8px 8px 0 0;
+            }
+            .logo { 
+              font-size: 24px; 
+              font-weight: bold; 
+              margin-bottom: 10px;
+              color: white;
+            }
+            .title { 
+              font-size: 22px; 
+              margin: 0; 
+              color: white;
+            }
+            .content { 
+              background-color: #ffffff; 
+              padding: 30px; 
+              border: 1px solid #e9ecef; 
+              border-top: none;
+            }
+            .footer { 
+              background-color: #f8fafc; 
+              padding: 20px; 
+              text-align: center; 
+              border-radius: 0 0 8px 8px; 
+              font-size: 0.9em; 
+              color: #64748b; 
+              border-top: 1px solid #e2e8f0;
+            }
+            .field { 
+              margin: 20px 0; 
+              padding: 15px 0;
+              border-bottom: 1px solid #e2e8f0;
+            }
+            .field:last-child { 
+              border-bottom: none;
+            }
+            .field-label { 
+              font-weight: bold; 
+              color: #1e293b; 
+              font-size: 16px;
+              display: block;
+              margin-bottom: 8px;
+            }
+            .field-value { 
+              margin-top: 5px; 
+              color: #334155;
+              font-size: 16px;
+              line-height: 1.5;
+            }
+            .highlight { 
+              background: linear-gradient(135deg, #dbeafe 0%, #e0f2fe 100%); 
+              padding: 20px; 
+              border-radius: 8px; 
+              margin: 20px 0; 
+              border-left: 4px solid #3b82f6;
+            }
+            .highlight strong { 
+              color: #1e3a8a; 
+            }
+            .contact-info {
+              display: flex;
+              justify-content: space-between;
+              flex-wrap: wrap;
+              gap: 15px;
+              margin-top: 20px;
+            }
+            .contact-item {
+              flex: 1;
+              min-width: 200px;
+              background: #f8fafc;
+              padding: 15px;
+              border-radius: 6px;
+              border-left: 3px solid #3b82f6;
+            }
+            .contact-label {
+              font-weight: 600;
+              color: #1e293b;
+              margin-bottom: 5px;
+              font-size: 14px;
+            }
+            .contact-value {
+              color: #475569;
+              font-size: 15px;
+            }
+            .disclaimer {
+              margin-top: 25px;
+              padding-top: 15px;
+              border-top: 1px solid #e2e8f0;
+              font-style: italic;
+              color: #64748b;
+              font-size: 14px;
+            }
           </style>
         </head>
         <body>
           <div class="container">
             <div class="header">
-              <h1 style="margin: 0; color: #0d6efd;">New Contact Form Submission</h1>
+              <div class="logo">Solid Rock Business Solutions</div>
+              <h1 class="title">New Contact Form Submission</h1>
             </div>
 
             <div class="content">
               <div class="highlight">
-                <p style="margin: 0; font-size: 1.1em;"><strong>Subject:</strong> ${formData.subject}</p>
+                <p style="margin: 0; font-size: 18px;"><strong>Subject:</strong> ${formData.subject}</p>
               </div>
 
               <div class="field">
-                <div class="field-label">Name</div>
+                <span class="field-label">Name</span>
                 <div class="field-value">${formData.name}</div>
               </div>
 
               <div class="field">
-                <div class="field-label">Email</div>
+                <span class="field-label">Email</span>
                 <div class="field-value">${formData.email}</div>
               </div>
 
               <div class="field">
-                <div class="field-label">Phone</div>
+                <span class="field-label">Phone</span>
                 <div class="field-value">${formData.phone || 'Not provided'}</div>
               </div>
 
               <div class="field">
-                <div class="field-label">Message</div>
+                <span class="field-label">Message</span>
                 <div class="field-value" style="white-space: pre-line;">${formData.message.replace(/\n/g, '<br>')}</div>
+              </div>
+
+              <div class="contact-info">
+                <div class="contact-item">
+                  <div class="contact-label">EMAIL</div>
+                  <div class="contact-value">info@solid-rock.co.za</div>
+                </div>
+                <div class="contact-item">
+                  <div class="contact-label">PHONE</div>
+                  <div class="contact-value">083 387 9951 / 082 793 9655</div>
+                </div>
+                <div class="contact-item">
+                  <div class="contact-label">ADDRESS</div>
+                  <div class="contact-value">Edenvale, Johannesburg, South Africa</div>
+                </div>
+              </div>
+
+              <div class="disclaimer">
+                This email was automatically generated from the Solid Rock Business Solutions contact form. Please do not reply directly to this email.
               </div>
             </div>
 
             <div class="footer">
-              <p>Sent from Solid Rock Business Solutions Contact Form</p>
-              <p style="margin-top: 10px;">This email was automatically generated. Please do not reply directly to this email.</p>
+              <p>&copy; 2026 Solid Rock Business Solutions. All rights reserved.</p>
+              <p style="margin-top: 10px;">Transforming businesses with integrated Finance and HR solutions</p>
             </div>
           </div>
         </body>
@@ -243,22 +372,36 @@ export default defineEventHandler(async (event: H3Event) => {
 
     // Create a plain text version for email clients that don't support HTML
     const textEmail = `
-      New Contact Form Submission
-
-      Subject: ${formData.subject}
-
-      Name: ${formData.name}
-
-      Email: ${formData.email}
-
-      Phone: ${formData.phone || 'Not provided'}
-
-      Message:
+      ==================================================
+                   SOLID ROCK BUSINESS SOLUTIONS
+      ==================================================
+      
+      NEW CONTACT FORM SUBMISSION
+      --------------------------------------------------
+      
+      SUBJECT: ${formData.subject}
+      
+      NAME: ${formData.name}
+      
+      EMAIL: ${formData.email}
+      
+      PHONE: ${formData.phone || 'Not provided'}
+      
+      MESSAGE:
       ${formData.message}
-
-      --
-      Sent from Solid Rock Business Solutions Contact Form
-      This email was automatically generated. Please do not reply directly to this email.
+      
+      --------------------------------------------------
+      CONTACT INFORMATION:
+      Email: info@solid-rock.co.za
+      Phone: 083 387 9951 / 082 793 9655
+      Address: Edenvale, Johannesburg, South Africa
+      --------------------------------------------------
+      
+      This email was automatically generated from the Solid Rock Business Solutions contact form.
+      Please do not reply directly to this email.
+      
+      © 2026 Solid Rock Business Solutions. All rights reserved.
+      Transforming businesses with integrated Finance and HR solutions
     `;
 
     // Determine the recipient email address

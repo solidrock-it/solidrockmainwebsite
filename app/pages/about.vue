@@ -62,13 +62,11 @@
           <!-- Second Column: Image -->
           <div class="fade-in">
             <div class="relative">
-              <div class="rounded-2xl overflow-hidden shadow-lg bg-gray-200 h-64 flex items-center justify-center">
-                <span class="text-gray-500 text-lg">About Team Image</span>
-              </div>
+              <img src="/images/our_directors.webp" alt="Solid Rock Business Solutions Team" class="rounded-2xl shadow-lg object-cover w-full h-96">
               <div class="absolute -bottom-6 -left-6 w-32 h-32 gradient-bg rounded-2xl flex items-center justify-center text-white shadow-lg">
                 <div class="text-center">
                   <div class="text-sm">Established</div>
-                  <div class="text-3xl font-bold">2014</div>
+                  <div class="text-3xl font-bold">2017</div>
                 </div>
               </div>
             </div>
@@ -88,9 +86,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div class="fade-in">
             <div class="bg-white dark:bg-dark-800 rounded-xl p-8 shadow-lg text-center">
-              <div class="w-32 h-32 rounded-full mx-auto mb-6 overflow-hidden border-4 border-trust-blue-600 bg-gray-200 flex items-center justify-center">
-                <span class="text-gray-500 text-4xl">TM</span>
-              </div>
+              <img src="/images/thabisile_macoba.webp" alt="Thabisile Macoba - Director: Finance" class="w-32 h-32 rounded-full mx-auto mb-6 object-cover border-4 border-trust-blue-600">
               <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">Thabisile Macoba</h3>
               <p class="text-lg text-trust-blue-600 mb-4">Director: Finance</p>
               <p class="text-gray-600 dark:text-gray-400">
@@ -101,9 +97,7 @@
 
           <div class="fade-in">
             <div class="bg-white dark:bg-dark-800 rounded-xl p-8 shadow-lg text-center">
-              <div class="w-32 h-32 rounded-full mx-auto mb-6 overflow-hidden border-4 border-trust-blue-600 bg-gray-200 flex items-center justify-center">
-                <span class="text-gray-500 text-4xl">AM</span>
-              </div>
+              <img src="/images/amanda_mokoena.webp" alt="Amanda Mokoena - Director: Human Resources" class="w-32 h-32 rounded-full mx-auto mb-6 object-cover border-4 border-trust-blue-600">
               <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">Amanda Mokoena</h3>
               <p class="text-lg text-trust-blue-600 mb-4">Director: Human Resources</p>
               <p class="text-gray-600 dark:text-gray-400">

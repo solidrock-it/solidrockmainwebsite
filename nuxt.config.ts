@@ -143,8 +143,8 @@ export default defineNuxtConfig({
       logo: '/images/logo.png',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Pretoria',
-        addressLocality: 'Pretoria',
+        streetAddress: 'Edenvale, Johannesburg',
+        addressLocality: 'Johannesburg',
         addressCountry: 'South Africa',
       },
       email: 'info@solid-rock.co.za',

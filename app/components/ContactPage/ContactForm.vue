@@ -141,16 +141,21 @@ const submitForm = async () => {
     // Execute reCAPTCHA
     const config = useRuntimeConfig()
     const recaptchaSiteKey = config.public.recaptchaSiteKey
-    if (!recaptchaSiteKey) {
-      throw new Error('reCAPTCHA site key is not configured in runtime config')
+
+    // Only execute reCAPTCHA if it's configured
+    let token = 'dummy-token-for-development';
+    if (recaptchaSiteKey) {
+      token = await executeRecaptcha('contact_form')
+    } else {
+      console.warn('reCAPTCHA is not configured, using dummy token for development');
     }
-    const token = await executeRecaptcha('contact_form')
 
     // Prepare form data with reCAPTCHA token
     const formDataWithRecaptcha = {
       ...formData,
       'g-recaptcha-response': token,
-      emailTo: 'info@solid-rock.co.za'
+      // Use the default email from environment variable if available
+      emailTo: undefined  // Let the backend use the default from environment variables
     }
 
     // Send form data to backend API

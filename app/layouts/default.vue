@@ -5,7 +5,7 @@
       <div class="container mx-auto px-4">
         <nav class="flex items-center justify-between">
           <NuxtLink to="/" class="flex items-center">
-            <img src="/images/logo.png" alt="Solid Rock Business Solutions Logo" class="w-auto max-h-[50px]" />
+            <img src="/images/logo.png" alt="Solid Rock Business Solutions Logo" class="w-auto max-h-[62.5px]" />
           </NuxtLink>
           
           <!-- Desktop Navigation -->
@@ -118,7 +118,7 @@
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div class="mb-4">
-              <img src="/images/logo.png" alt="Solid Rock Business Solutions Logo" class="w-auto max-h-[62.5px]" />
+              <img src="/images/logo.png" alt="Solid Rock Business Solutions Logo" class="w-auto max-h-[80px]" />
             </div>
             <p class="text-gray-400">
               Delivering integrated Finance and HR solutions that are practical, tailored, and directly aligned to strategy execution.
@@ -158,7 +158,7 @@
               </li>
               <li class="flex items-start">
                 <MapPinIcon class="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
-                <span>Pretoria, South Africa</span>
+                <span>Edenvale, Johannesburg, South Africa</span>
               </li>
             </ul>
           </div>
