@@ -25,4 +25,9 @@ logs
 
 # Blueprint files
 blueprint_extract/
+blueprint_extract_v1/
 nhlalala-corporate.zip
+
+# Source documents (internal reference only)
+*.docx
+requirements.md
