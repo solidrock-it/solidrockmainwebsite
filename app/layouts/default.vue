@@ -1,11 +1,15 @@
 <template>
   <div class="min-h-screen flex flex-col">
     <!-- Header -->
-    <header class="py-2 bg-white dark:bg-dark-950 shadow-sm">
+    <header class="py-2 bg-white dark:bg-dark-950 shadow-md sticky top-0 z-50">
       <div class="container mx-auto px-4">
         <nav class="flex items-center justify-between">
           <NuxtLink to="/" class="flex items-center">
-            <img src="/images/logo.png" alt="Solid Rock Business Solutions Logo" class="w-auto max-h-[62.5px]" />
+            <div class="relative inline-flex items-center">
+              <!-- Overlay for logo visibility -->
+              <span class="absolute inset-0 bg-white/80 dark:bg-white/10 rounded-lg blur-sm"></span>
+              <img src="/images/logo.png" alt="Solid Rock Business Solutions Logo" class="w-auto max-h-[62.5px] relative z-10" />
+            </div>
           </NuxtLink>
           
           <!-- Desktop Navigation -->
@@ -118,10 +122,14 @@
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div class="mb-4">
-              <img src="/images/logo.png" alt="Solid Rock Business Solutions Logo" class="w-auto max-h-[80px]" />
+              <div class="relative inline-flex items-center">
+                <!-- Overlay for logo visibility on dark footer -->
+                <span class="absolute inset-0 bg-white/20 rounded-lg blur-sm"></span>
+                <img src="/images/logo.png" alt="Solid Rock Business Solutions Logo" class="w-auto max-h-[80px] relative z-10" />
+              </div>
             </div>
-            <p class="text-gray-400">
-              Delivering integrated Finance and HR solutions that are practical, tailored, and directly aligned to strategy execution.
+            <p class="text-gray-400 text-sm">
+              Solid Rock Business Solutions (Pty) Ltd - An independent professional services firm delivering integrated Finance, Compensation and Benefits solutions. Founded 2017.
             </p>
           </div>
           
@@ -138,10 +146,12 @@
           <div>
             <h4 class="text-lg font-semibold mb-4">Services</h4>
             <ul class="space-y-2">
-              <li class="text-gray-400">Financial Strategy</li>
-              <li class="text-gray-400">HR Consulting</li>
-              <li class="text-gray-400">Financial Governance</li>
-              <li class="text-gray-400">Training & Development</li>
+              <li class="text-gray-400">Finance Solutions</li>
+              <li class="text-gray-400">External CFO Services</li>
+              <li class="text-gray-400">Tax & Compliance</li>
+              <li class="text-gray-400">Compensation & Benefits</li>
+              <li class="text-gray-400">Retirement Funds</li>
+              <li class="text-gray-400">Beneficiary Tracing</li>
             </ul>
           </div>
           

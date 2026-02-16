@@ -5,7 +5,7 @@
       <div class="container mx-auto px-4 text-center">
         <h1 class="text-4xl md:text-5xl font-bold mb-6">Get In Touch</h1>
         <p class="text-xl opacity-90 max-w-3xl mx-auto">
-          Ready to transform your business with our integrated Finance and HR solutions? We're here to help.
+          Ready to transform your business with our integrated Finance, Compensation and Benefits solutions? We're here to help.
         </p>
       </div>
     </section>
@@ -20,7 +20,7 @@
             <div class="h-1 w-20 bg-trust-blue-600 mb-8"></div>
 
             <p class="text-lg text-gray-700 dark:text-gray-300 mb-10">
-              Have questions about our Finance and HR services or ready to start a project? Reach out to us and our team will get back to you as soon as possible.
+              Have questions about our Finance, Compensation and Benefits services or ready to start a project? Reach out to us and our team will get back to you as soon as possible.
             </p>
 
             <div class="space-y-8">
@@ -69,20 +69,22 @@
             <div class="mt-12">
               <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-6">Meet Our Directors</h3>
               <div class="space-y-6">
-                <div class="flex items-center">
-                  <div class="w-10 h-10 rounded-full bg-trust-blue-100 dark:bg-trust-blue-900/30 flex items-center justify-center text-trust-blue-800 dark:text-trust-blue-200 mr-4">
+                <div class="flex items-start">
+                  <div class="w-10 h-10 rounded-full bg-trust-blue-100 dark:bg-trust-blue-900/30 flex items-center justify-center text-trust-blue-800 dark:text-trust-blue-200 mr-4 flex-shrink-0">
                     <i class="fas fa-user-tie"></i>
                   </div>
                   <div>
-                    <p class="font-medium text-gray-800 dark:text-white">Thabisile Macoba - Director: Finance</p>
+                    <p class="font-medium text-gray-800 dark:text-white">Thabisile Macoba - Co-Founder & Director: Finance</p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">CA(SA) | 15+ years CFO experience</p>
                   </div>
                 </div>
-                <div class="flex items-center">
-                  <div class="w-10 h-10 rounded-full bg-trust-blue-100 dark:bg-trust-blue-900/30 flex items-center justify-center text-trust-blue-800 dark:text-trust-blue-200 mr-4">
+                <div class="flex items-start">
+                  <div class="w-10 h-10 rounded-full bg-trust-blue-100 dark:bg-trust-blue-900/30 flex items-center justify-center text-trust-blue-800 dark:text-trust-blue-200 mr-4 flex-shrink-0">
                     <i class="fas fa-user-tie"></i>
                   </div>
                   <div>
-                    <p class="font-medium text-gray-800 dark:text-white">Amanda Mokoena - Director: Human Resources</p>
+                    <p class="font-medium text-gray-800 dark:text-white">Amanda Mokoena - Co-Founder & Director: Compensation and Benefits</p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">GRP, CCP | Retirement Funds Specialist</p>
                   </div>
                 </div>
               </div>

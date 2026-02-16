@@ -5,7 +5,7 @@
       <div class="container mx-auto px-4 text-center">
         <h1 class="text-4xl md:text-5xl font-bold mb-6">About Us</h1>
         <p class="text-xl opacity-90 max-w-3xl mx-auto">
-          Learn about our journey, values, and the partners who trust us to deliver exceptional Finance and HR solutions.
+          Learn about our journey, values, and the leaders who trust us to deliver exceptional Finance, Compensation and Benefits solutions.
         </p>
       </div>
     </section>
@@ -20,13 +20,13 @@
             <div class="h-1 w-20 bg-trust-blue-600 mb-8"></div>
 
             <p class="text-lg text-gray-700 dark:text-gray-300 mb-6">
-              Solid Rock Business Solutions stands as a premier provider of integrated Finance and HR solutions, offering comprehensive services that align strategy with execution to drive measurable, sustainable results.
+              Solid Rock Business Solutions (Pty) Ltd is an independent professional services firm delivering integrated Finance, Compensation and Benefits solutions to businesses, development programmes, funds, and employer groups.
             </p>
             <p class="text-lg text-gray-700 dark:text-gray-300 mb-6">
-              Our seasoned team of experts combines deep industry knowledge with practical experience to deliver tailored solutions that address the unique needs of our clients.
+              Founded in 2017, Solid Rock was established to deliver practical, specialised, and people-centred solutions in finance, compensation and benefits. We operate through two focused divisions: Finance Solutions and Compensation and Benefits Solutions.
             </p>
             <p class="text-lg text-gray-700 dark:text-gray-300 mb-6">
-              Solid Rock Business Solutions is driven by a passion for excellence and a commitment to deliver unparalleled value to our clients. As a trusted partner, we empower businesses to embrace innovation, drive transformation, and achieve sustainable success in today's fast-paced world.
+              Our shareholders' depth of expertise and professional credentials provide clients with assurance of the highest standards of professionalism, efficiency, and service excellence.
             </p>
             <p class="text-lg text-gray-700 dark:text-gray-300 mb-8">
               Our tagline "Putting People on Good Grounds" reflects our belief that strong businesses are built on solid financial foundations and fair, well-supported people practices.
@@ -34,8 +34,8 @@
 
             <div class="grid grid-cols-2 gap-6 mb-8">
               <div class="bg-gray-50 dark:bg-dark-900 p-6 rounded-lg text-center">
-                <div class="text-3xl font-bold text-trust-blue-600 mb-2">10+</div>
-                <div class="text-gray-600 dark:text-gray-400">Years Experience</div>
+                <div class="text-3xl font-bold text-trust-blue-600 mb-2">20+</div>
+                <div class="text-gray-600 dark:text-gray-400">Years Experience (Each Leader)</div>
               </div>
               <div class="bg-gray-50 dark:bg-dark-900 p-6 rounded-lg text-center">
                 <div class="text-3xl font-bold text-trust-blue-600 mb-2">50+</div>
@@ -45,16 +45,16 @@
 
             <div class="flex flex-wrap gap-4">
               <div class="px-4 py-2 bg-trust-blue-100 dark:bg-trust-blue-900/30 text-trust-blue-800 dark:text-trust-blue-200 rounded-full text-sm font-medium">
-                Finance
+                Finance Solutions
               </div>
               <div class="px-4 py-2 bg-trust-blue-100 dark:bg-trust-blue-900/30 text-trust-blue-800 dark:text-trust-blue-200 rounded-full text-sm font-medium">
-                HR Solutions
+                Compensation & Benefits
               </div>
               <div class="px-4 py-2 bg-trust-blue-100 dark:bg-trust-blue-900/30 text-trust-blue-800 dark:text-trust-blue-200 rounded-full text-sm font-medium">
-                Strategy Execution
+                External CFO
               </div>
               <div class="px-4 py-2 bg-trust-blue-100 dark:bg-trust-blue-900/30 text-trust-blue-800 dark:text-trust-blue-200 rounded-full text-sm font-medium">
-                Tailored Solutions
+                Retirement Funds
               </div>
             </div>
           </div>
@@ -62,7 +62,7 @@
           <!-- Second Column: Image -->
           <div class="fade-in">
             <div class="relative">
-              <img src="/images/our_directors.webp" alt="Solid Rock Business Solutions Team" class="rounded-2xl shadow-lg object-cover w-full h-96">
+              <img src="/images/our_directors.webp" alt="Solid Rock Business Solutions Leadership" class="rounded-2xl shadow-lg object-cover w-full h-96">
               <div class="absolute -bottom-6 -left-6 w-32 h-32 gradient-bg rounded-2xl flex items-center justify-center text-white shadow-lg">
                 <div class="text-center">
                   <div class="text-sm">Established</div>
@@ -81,27 +81,38 @@
         <div class="text-center mb-12 fade-in">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">Our Leadership</h2>
           <div class="h-1 w-20 bg-trust-blue-600 mx-auto mb-8"></div>
+          <p class="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            Solid Rock is led by seasoned industry professionals whose individual experience spans over two decades across a broad range of industries.
+          </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div class="fade-in">
             <div class="bg-white dark:bg-dark-800 rounded-xl p-8 shadow-lg text-center">
-              <img src="/images/thabisile_macoba.webp" alt="Thabisile Macoba - Director: Finance" class="w-32 h-32 rounded-full mx-auto mb-6 object-cover border-4 border-trust-blue-600">
-              <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">Thabisile Macoba</h3>
-              <p class="text-lg text-trust-blue-600 mb-4">Director: Finance</p>
-              <p class="text-gray-600 dark:text-gray-400">
-                Brings extensive experience in financial strategy and governance, ensuring our clients' financial foundations are solid.
+              <img src="/images/amanda_mokoena.webp" alt="Amanda Mokoena - Co-Founder & Director: Compensation and Benefits" class="w-32 h-32 rounded-full mx-auto mb-6 object-cover border-4 border-trust-blue-600">
+              <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">Amanda Mokoena</h3>
+              <p class="text-lg font-semibold text-gray-700 dark:text-gray-200 mb-2">GRP, CCP</p>
+              <p class="text-md text-gray-500 dark:text-gray-400 mb-4">Co-Founder & Director: Compensation and Benefits</p>
+              <p class="text-gray-600 dark:text-gray-400 text-md mb-4">
+                Certified Compensation Professional (CCP) with a Postgraduate Diploma in Strategic Human Resources Management from Stellenbosch University, Management Development Programme from GIBS, and Advanced HR Management certification from Wits University. Holds Global Remuneration Professional (GRP) accreditation through the South African Reward Association. Currently completing MPhil in Strategic Management at the University of Pretoria.
+              </p>
+              <p class="text-gray-600 dark:text-gray-400 text-md">
+                Brings extensive expertise in Total Rewards, executive remuneration, remuneration governance, performance management, job evaluation, salary architecture, and benefits design. A Retirement Funds specialist with Board of Trustees experience spanning over two decades across multiple industries in South Africa and the broader African continent.
               </p>
             </div>
           </div>
 
           <div class="fade-in">
             <div class="bg-white dark:bg-dark-800 rounded-xl p-8 shadow-lg text-center">
-              <img src="/images/amanda_mokoena.webp" alt="Amanda Mokoena - Director: Human Resources" class="w-32 h-32 rounded-full mx-auto mb-6 object-cover border-4 border-trust-blue-600">
-              <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">Amanda Mokoena</h3>
-              <p class="text-lg text-trust-blue-600 mb-4">Director: Human Resources</p>
-              <p class="text-gray-600 dark:text-gray-400">
-                Specializes in human capital management, ensuring our HR solutions put people on good grounds for success.
+              <img src="/images/thabisile_macoba.webp" alt="Thabisile Macoba - Co-Founder & Director: Finance" class="w-32 h-32 rounded-full mx-auto mb-6 object-cover border-4 border-trust-blue-600">
+              <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">Thabisile Macoba</h3>
+              <p class="text-lg font-semibold text-gray-700 dark:text-gray-200 mb-2">CA(SA)</p>
+              <p class="text-md text-gray-500 dark:text-gray-400 mb-4">Co-Founder & Director: Finance</p>
+              <p class="text-gray-600 dark:text-gray-400 text-md mb-4">
+                Chartered Accountant (CA(SA)) with a Post Graduate Diploma, Financial Accounting and BCom Honors (Accounting) from the University of KwaZulu Natal. Over 15 years of senior finance leadership experience, including more than a decade in Chief Financial Officer roles within listed and private organisations.
+              </p>
+              <p class="text-gray-600 dark:text-gray-400 text-md">
+                Specializes in building strong finance functions, improving governance, managing risk, and using financial insight to support business strategy and sustainable growth. Experienced in leading finance teams, working with boards and executive committees, and partnering with business leaders to improve profitability, cash flow, and operational efficiency. Passionate about enabling business owners to understand their numbers, make informed decisions, and build resilient, sustainable enterprises.
               </p>
             </div>
           </div>
@@ -109,36 +120,80 @@
       </div>
     </section>
 
-    <!-- Vision & Mission Section -->
+    <!-- Purpose & Divisions Section -->
     <section class="py-16 bg-white dark:bg-dark-950 transition-colors duration-300">
       <div class="container mx-auto px-4">
         <div class="text-center mb-12 fade-in">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">Our Vision and Mission</h2>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">Our Purpose</h2>
           <div class="h-1 w-20 bg-trust-blue-600 mx-auto mb-8"></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto fade-in">
+          <div class="bg-gray-50 dark:bg-dark-800 rounded-xl p-8 shadow-lg text-center mb-12">
+            <p class="text-xl text-gray-700 dark:text-gray-300 italic">
+              Solid Rock Business Solutions exists to strengthen both business sustainability and people outcomes. Whether through sound financial management or fair and effective compensation and benefits solutions, our work is grounded in professionalism, integrity, and impact.
+            </p>
+          </div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div class="fade-in">
-            <div class="bg-gray-50 dark:bg-dark-800 rounded-xl p-8 shadow-lg text-center">
+            <div class="bg-gray-50 dark:bg-dark-800 rounded-xl p-8 shadow-lg">
               <div class="w-16 h-16 gradient-bg rounded-lg flex items-center justify-center text-white mx-auto mb-6">
-                <EyeIcon class="w-8 h-8" />
+                <i class="fas fa-chart-line text-2xl"></i>
               </div>
-              <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">Our Vision</h3>
-              <p class="text-gray-600 dark:text-gray-400">
-                To be the leading provider of integrated Finance and HR solutions, driving sustainable business growth through practical, tailored strategies that align people and finance with strategic execution.
+              <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-4 text-center">Finance Solutions</h3>
+              <p class="text-gray-600 dark:text-gray-400 mb-4">
+                External CFO, Financial Management, Tax & Compliance, and Project-Based Finance services for SMMEs, SD/SED beneficiaries, and organizations requiring specialized financial expertise.
               </p>
+              <ul class="text-gray-600 dark:text-gray-400 space-y-2">
+                <li class="flex items-start">
+                  <span class="text-trust-blue-600 mr-2">•</span>
+                  <span>Ongoing Financial Management</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-trust-blue-600 mr-2">•</span>
+                  <span>Tax & Regulatory Compliance</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-trust-blue-600 mr-2">•</span>
+                  <span>External CFO Services</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-trust-blue-600 mr-2">•</span>
+                  <span>Project-Based Finance Services</span>
+                </li>
+              </ul>
             </div>
           </div>
 
           <div class="fade-in">
-            <div class="bg-gray-50 dark:bg-dark-800 rounded-xl p-8 shadow-lg text-center">
+            <div class="bg-gray-50 dark:bg-dark-800 rounded-xl p-8 shadow-lg">
               <div class="w-16 h-16 gradient-bg rounded-lg flex items-center justify-center text-white mx-auto mb-6">
-                <FlagIcon class="w-8 h-8" />
+                <i class="fas fa-users text-2xl"></i>
               </div>
-              <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">Our Mission</h3>
-              <p class="text-gray-600 dark:text-gray-400">
-                To deliver integrated Finance and HR solutions that are practical, tailored, and directly aligned to strategy execution—driving measurable, sustainable results rather than generic advice.
+              <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-4 text-center">Compensation & Benefits</h3>
+              <p class="text-gray-600 dark:text-gray-400 mb-4">
+                Employee Benefits, Retirement Funds, Job Evaluation, and Beneficiary Tracing services that simplify complex compensation matters and ensure fair workplace structures.
               </p>
+              <ul class="text-gray-600 dark:text-gray-400 space-y-2">
+                <li class="flex items-start">
+                  <span class="text-trust-blue-600 mr-2">•</span>
+                  <span>Unclaimed Benefits & Beneficiary Tracing</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-trust-blue-600 mr-2">•</span>
+                  <span>Retirement Funds & Employee Benefits</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-trust-blue-600 mr-2">•</span>
+                  <span>Remuneration Services</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-trust-blue-600 mr-2">•</span>
+                  <span>Employee Benefits for SMMEs</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -163,26 +218,19 @@
 </template>
 
 <script setup>
-import {
-  EyeIcon,
-  FlagIcon
-} from '@heroicons/vue/24/solid'
-
 useHead({
   title: 'About Us - Solid Rock Business Solutions',
   meta: [
     {
       name: 'description',
-      content: 'Learn about Solid Rock Business Solutions, a premier provider of integrated Finance and HR solutions with a commitment to practical, tailored strategies.'
+      content: 'Learn about Solid Rock Business Solutions, founded in 2017. Led by Amanda Mokoena (GRP, CCP) and Thabisile Macoba CA(SA), delivering integrated Finance, Compensation and Benefits solutions.'
     }
   ]
 })
 
 onMounted(async () => {
-  // Wait for all components to be rendered and data to be loaded
   await new Promise(resolve => setTimeout(resolve, 100));
 
-  // Set up Intersection Observer to handle fade-in effect for all sections
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -191,7 +239,6 @@ onMounted(async () => {
     })
   }, { threshold: 0.1 })
 
-  // Observe all elements with fade-in class
   document.querySelectorAll('.fade-in').forEach(el => {
     observer.observe(el)
   })
@@ -211,6 +258,6 @@ onMounted(async () => {
 }
 
 .gradient-bg {
-  background: linear-gradient(135deg, #1d4ed8 0%, #0d9488 100%); /* Trust Blue to Aquamarine */
+  background: linear-gradient(135deg, #1d4ed8 0%, #0d9488 100%);
 }
 </style>
