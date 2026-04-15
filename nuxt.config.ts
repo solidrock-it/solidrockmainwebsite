@@ -155,7 +155,7 @@ export default defineNuxtConfig({
   },
   nitro: {
     prerender: {
-      routes: ['/', '/about', '/services', '/contact']
+      routes: ['/', '/about', '/services', '/contact', '/google98dce45f642fbfe2.html']
     },
     // Configure multipart handling for file uploads
     multipart: {
