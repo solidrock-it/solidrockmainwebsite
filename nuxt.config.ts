@@ -97,6 +97,7 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: 'google-site-verification', content: 'OqKg2zKk9DusesKooARviY_VsjU0vsm_a4FSHNMpGc0' },
         { name: 'description', content: 'Solid Rock Business Solutions delivers integrated Finance and HR solutions that are practical, tailored, and directly aligned to strategy execution—driving measurable, sustainable results.' },
         { property: 'og:type', content: 'website' },
         { property: 'og:site_name', content: 'Solid Rock Business Solutions' },
