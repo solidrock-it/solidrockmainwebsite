@@ -23,6 +23,9 @@ logs
 .env.*
 !.env.example
 
+# pnpm workspace (auto-generated)
+pnpm-workspace.yaml
+
 # Blueprint files
 blueprint_extract/
 blueprint_extract_v1/
