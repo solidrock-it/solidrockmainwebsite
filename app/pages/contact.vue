@@ -5,7 +5,7 @@
       <div class="container mx-auto px-4 text-center">
         <h1 class="text-4xl md:text-5xl font-bold mb-6">Get In Touch</h1>
         <p class="text-xl opacity-90 max-w-3xl mx-auto">
-          Ready to transform your business with our integrated Finance, Compensation and Benefits solutions? We're here to help.
+          Ready to transform your business with our Compensation and Benefits solutions? We're here to help.
         </p>
       </div>
     </section>
@@ -20,7 +20,7 @@
             <div class="h-1 w-20 bg-trust-blue-600 mb-8"></div>
 
             <p class="text-lg text-gray-700 dark:text-gray-300 mb-10">
-              Have questions about our Finance, Compensation and Benefits services or ready to start a project? Reach out to us and our team will get back to you as soon as possible.
+              Have questions about our Compensation and Benefits services or ready to start a project? Reach out to us and our team will get back to you as soon as possible.
             </p>
 
             <div class="space-y-8">
@@ -30,7 +30,7 @@
                 </div>
                 <div>
                   <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Address</h3>
-                  <p class="text-gray-600 dark:text-gray-400">Edenvale, Johannesburg, South Africa</p>
+                  <p class="text-gray-600 dark:text-gray-400">Centurion, South Africa</p>
                 </div>
               </div>
 
@@ -50,7 +50,7 @@
                 </div>
                 <div>
                   <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Phone</h3>
-                  <p class="text-gray-600 dark:text-gray-400">083 387 9951 / 082 793 9655</p>
+                  <p class="text-gray-600 dark:text-gray-400">082 793 9655</p>
                 </div>
               </div>
 
@@ -65,25 +65,16 @@
               </div>
             </div>
 
-            <!-- Directors Contact -->
+            <!-- Director Contact -->
             <div class="mt-12">
-              <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-6">Meet Our Directors</h3>
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-6">Meet Our Director</h3>
               <div class="space-y-6">
                 <div class="flex items-start">
                   <div class="w-10 h-10 rounded-full bg-trust-blue-100 dark:bg-trust-blue-900/30 flex items-center justify-center text-trust-blue-800 dark:text-trust-blue-200 mr-4 flex-shrink-0">
                     <i class="fas fa-user-tie"></i>
                   </div>
                   <div>
-                    <p class="font-medium text-gray-800 dark:text-white">Thabisile Macoba - Co-Founder & Director: Finance</p>
-                    <p class="text-sm text-gray-600 dark:text-gray-400">CA(SA) | 15+ years CFO experience</p>
-                  </div>
-                </div>
-                <div class="flex items-start">
-                  <div class="w-10 h-10 rounded-full bg-trust-blue-100 dark:bg-trust-blue-900/30 flex items-center justify-center text-trust-blue-800 dark:text-trust-blue-200 mr-4 flex-shrink-0">
-                    <i class="fas fa-user-tie"></i>
-                  </div>
-                  <div>
-                    <p class="font-medium text-gray-800 dark:text-white">Amanda Mokoena - Co-Founder & Director: Compensation and Benefits</p>
+                    <p class="font-medium text-gray-800 dark:text-white">Amanda Mokoena - Founder & Director: Compensation and Benefits</p>
                     <p class="text-sm text-gray-600 dark:text-gray-400">GRP, CCP | Retirement Funds Specialist</p>
                   </div>
                 </div>
@@ -125,7 +116,7 @@
               height="100%" 
               frameborder="0" 
               style="border:0" 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.055368301062!2d28.14503431446539!3d-26.14195298336185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950b675f7db11d%3A0x855c2340e15e42!2sEdenvale%2C%20Gauteng%2C%20South%20Africa!5e0!3m2!1sen!2s!4v1612345678901!5m2!1sen!2s" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114967.63259317006!2d28.1356864!3d-25.8602385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9573c3f3b5c1f7%3A0x6a7e3d3a3e3a3e3a!2sCenturion%2C%20South%20Africa!5e0!3m2!1sen!2s!4v1612345678901!5m2!1sen!2s" 
               allowfullscreen
             ></iframe>
           </div>
@@ -140,31 +131,31 @@ import { MapPinIcon, EnvelopeIcon, PhoneIcon, ClockIcon } from '@heroicons/vue/2
 import ContactForm from '@/components/ContactPage/ContactForm.vue'
 
 useHead({
-  title: 'Contact Us - Solid Rock Business Solutions',
+  title: 'Contact Us - Solid Rock Strategic Business Solutions',
   meta: [
     {
       name: 'description',
-      content: 'Get in touch with Solid Rock Business Solutions. Contact us at info@solid-rock.co.za or call 083 387 9951 / 082 793 9655.'
+      content: 'Get in touch with Solid Rock Strategic Business Solutions. Contact us at info@solid-rock.co.za or call 083 387 9951 / 082 793 9655.'
     },
     {
       property: 'og:title',
-      content: 'Contact Us - Solid Rock Business Solutions'
+      content: 'Contact Us - Solid Rock Strategic Business Solutions'
     },
     {
       property: 'og:description',
-      content: 'Get in touch with Solid Rock Business Solutions. Contact us at info@solid-rock.co.za or call 083 387 9951 / 082 793 9655.'
+      content: 'Get in touch with Solid Rock Strategic Business Solutions. Contact us at info@solid-rock.co.za or call 083 387 9951 / 082 793 9655.'
     },
     {
       property: 'og:url',
-      content: `${process.env.SITE_URL || 'https://solid-rock.co.za'}/contact`
+      content: `${process.env.SITE_URL || 'https://www.solid-rock.co.za'}/contact`
     },
     {
       name: 'twitter:title',
-      content: 'Contact Us - Solid Rock Business Solutions'
+      content: 'Contact Us - Solid Rock Strategic Business Solutions'
     },
     {
       name: 'twitter:description',
-      content: 'Get in touch with Solid Rock Business Solutions. Contact us at info@solid-rock.co.za or call 083 387 9951 / 082 793 9655.'
+      content: 'Get in touch with Solid Rock Strategic Business Solutions. Contact us at info@solid-rock.co.za or call 083 387 9951 / 082 793 9655.'
     }
   ]
 })

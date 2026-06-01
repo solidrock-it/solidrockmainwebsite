@@ -60,7 +60,7 @@ export default defineNuxtConfig({
     contactEmail: process.env.CONTACT_EMAIL,
     recaptchaSecretKey: process.env.RECAPTCHA_SECRET_KEY,
     public: {
-      siteUrl: process.env.SITE_URL || 'https://solid-rock.co.za',
+      siteUrl: process.env.SITE_URL || 'https://www.solid-rock.co.za',
       recaptchaSiteKey: process.env.RECAPTCHA_SITE_KEY
     }
   },
@@ -97,12 +97,20 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'google-site-verification', content: 'OqKg2zKk9DusesKooARviY_VsjU0vsm_a4FSHNMpGc0' },
-        { name: 'description', content: 'Solid Rock Business Solutions delivers integrated Finance and HR solutions that are practical, tailored, and directly aligned to strategy execution—driving measurable, sustainable results.' },
+        // Search Console Verification
+        { name: 'google-site-verification', content: process.env.GOOGLE_SITE_VERIFICATION || 'OqKg2zKk9DusesKooARviY_VsjU0vsm_a4FSHNMpGc0' },
+        { name: 'msvalidate.01', content: process.env.BING_SITE_VERIFICATION || '' },
+        { name: 'p:domain_verify', content: process.env.PINTEREST_SITE_VERIFICATION || '' },
+        { name: 'description', content: 'Solid Rock Strategic Business Solutions delivers integrated Compensation and Benefits solutions that are practical, tailored, and directly aligned to strategy execution—driving measurable, sustainable results.' },
         { property: 'og:type', content: 'website' },
-        { property: 'og:site_name', content: 'Solid Rock Business Solutions' },
+        { property: 'og:site_name', content: 'Solid Rock Strategic Business Solutions' },
+        { property: 'og:locale', content: 'en_ZA' },
+        { property: 'og:country-name', content: 'South Africa' },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:site', content: '@solidrock' },
+        // Geo tags for local SEO
+        { name: 'geo.region', content: 'ZA-GP' },
+        { name: 'geo.placename', content: 'Centurion' },
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -115,17 +123,41 @@ export default defineNuxtConfig({
           src: process.env.RECAPTCHA_SITE_KEY ? `https://www.google.com/recaptcha/api.js?render=${process.env.RECAPTCHA_SITE_KEY}` : 'https://www.google.com/recaptcha/api.js',
           defer: true
         },
+        // Structured data for organization
+        {
+          type: 'application/ld+json',
+          children: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'Solid Rock Strategic Business Solutions',
+            alternateName: 'Solid Rock',
+            url: process.env.SITE_URL || 'https://www.solid-rock.co.za',
+            logo: `${process.env.SITE_URL || 'https://www.solid-rock.co.za'}/images/dark_text_logo.png`,
+            address: {
+              '@type': 'PostalAddress',
+              addressLocality: 'Centurion',
+              addressCountry: 'ZA',
+            },
+            email: 'info@solid-rock.co.za',
+            telephone: '082 793 9655',
+            sameAs: [],
+          }),
+        },
       ],
     },
   },
   site: {
-    url: process.env.SITE_URL || 'https://solid-rock.co.za',
-    name: 'Solid Rock Business Solutions',
-    description: 'Integrated Finance and HR solutions that are practical, tailored, and directly aligned to strategy execution',
+    url: process.env.SITE_URL || 'https://www.solid-rock.co.za',
+    name: 'Solid Rock Strategic Business Solutions',
+    description: 'Integrated Compensation and Benefits solutions that are practical, tailored, and directly aligned to strategy execution',
   },
   sitemap: {
     autoLastmod: true,
-    autoI18n: false
+    autoI18n: false,
+    // Include all static routes
+    include: ['/', '/about', '/services', '/contact'],
+    // Exclude any routes that shouldn't be indexed
+    exclude: []
   },
   robots: {
     rules: [
@@ -133,29 +165,31 @@ export default defineNuxtConfig({
         userAgent: '*',
         allow: '/',
       }
-    ]
+    ],
+    // Ensure robots.txt is generated for production
+    sitemap: process.env.SITE_URL ? `${process.env.SITE_URL}/sitemap.xml` : undefined
   },
   schemaOrg: {
     identity: defineOrganization({
-      name: 'Solid Rock Business Solutions',
+      name: 'Solid Rock Strategic Business Solutions',
       alternateName: 'Solid Rock',
-      description: 'Integrated Finance and HR solutions that are practical, tailored, and directly aligned to strategy execution',
-      url: process.env.SITE_URL || 'https://solid-rock.co.za',
-      logo: '/images/logo.png',
+      description: 'Integrated Compensation and Benefits solutions that are practical, tailored, and directly aligned to strategy execution',
+      url: process.env.SITE_URL || 'https://www.solid-rock.co.za',
+      logo: '/images/dark_text_logo.png',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Edenvale, Johannesburg',
-        addressLocality: 'Johannesburg',
+        streetAddress: 'Centurion',
+        addressLocality: 'Centurion',
         addressCountry: 'South Africa',
       },
       email: 'info@solid-rock.co.za',
-      telephone: '083 387 9951 / 082 793 9655',
+      telephone: '082 793 9655',
       sameAs: [],
     })
   },
   nitro: {
     prerender: {
-      routes: ['/', '/about', '/services', '/contact', '/google98dce45f642fbfe2.html']
+      routes: ['/', '/about', '/services', '/contact', '/google98dce45f642fbfe2.html', '/bing_verification.html']
     },
     // Configure multipart handling for file uploads
     multipart: {

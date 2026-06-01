@@ -5,11 +5,7 @@
       <div class="container mx-auto px-4">
         <nav class="flex items-center justify-between">
           <NuxtLink to="/" class="flex items-center">
-            <div class="relative inline-flex items-center">
-              <!-- Overlay for logo visibility -->
-              <span class="absolute inset-0 bg-white/80 dark:bg-white/10 rounded-lg blur-sm"></span>
-              <img src="/images/logo.png" alt="Solid Rock Business Solutions Logo" class="w-auto max-h-[62.5px] relative z-10" />
-            </div>
+            <img :src="$colorMode.value === 'dark' ? '/images/light_text_logo.png' : '/images/dark_text_logo.png'" alt="Solid Rock Strategic Business Solutions Logo" class="w-auto max-w-[180px] md:max-w-[220px] h-auto" />
           </NuxtLink>
           
           <!-- Desktop Navigation -->
@@ -122,14 +118,10 @@
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div class="mb-4">
-              <div class="relative inline-flex items-center">
-                <!-- Overlay for logo visibility on dark footer -->
-                <span class="absolute inset-0 bg-white/20 rounded-lg blur-sm"></span>
-                <img src="/images/logo.png" alt="Solid Rock Business Solutions Logo" class="w-auto max-h-[80px] relative z-10" />
-              </div>
+              <img src="/images/light_text_logo.png" alt="Solid Rock Strategic Business Solutions Logo" class="w-auto max-w-[200px] h-auto" />
             </div>
             <p class="text-gray-400 text-sm">
-              Solid Rock Business Solutions (Pty) Ltd - An independent professional services firm delivering integrated Finance, Compensation and Benefits solutions. Founded 2017.
+              Solid Rock Strategic Business Solutions (Pty) Ltd - An independent professional services firm delivering integrated Compensation and Benefits solutions. Founded 2017.
             </p>
           </div>
           
@@ -146,12 +138,10 @@
           <div>
             <h4 class="text-lg font-semibold mb-4">Services</h4>
             <ul class="space-y-2">
-              <li class="text-gray-400">Finance Solutions</li>
-              <li class="text-gray-400">External CFO Services</li>
-              <li class="text-gray-400">Tax & Compliance</li>
               <li class="text-gray-400">Compensation & Benefits</li>
               <li class="text-gray-400">Retirement Funds</li>
               <li class="text-gray-400">Beneficiary Tracing</li>
+              <li class="text-gray-400">Remuneration Services</li>
             </ul>
           </div>
           
@@ -164,18 +154,18 @@
               </li>
               <li class="flex items-start">
                 <PhoneIcon class="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
-                <span>083 387 9951 / 082 793 9655</span>
+                <span>082 793 9655</span>
               </li>
               <li class="flex items-start">
                 <MapPinIcon class="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
-                <span>Edenvale, Johannesburg, South Africa</span>
+                <span>Centurion, South Africa</span>
               </li>
             </ul>
           </div>
         </div>
         
         <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-          <p>&copy; {{ new Date().getFullYear() }} Solid Rock Business Solutions. All rights reserved.</p>
+          <p>&copy; {{ new Date().getFullYear() }} Solid Rock Strategic Business Solutions. All rights reserved.</p>
           <p class="mt-2">"Putting People on Good Grounds"</p>
         </div>
       </div>

@@ -9,14 +9,14 @@
         </h1>
 
         <div class="text-xl md:text-2xl lg:text-3xl mb-10 min-h-[2.5rem]">
-          <span class="animated-word" :class="{ active: currentWordIndex === index, 'finance-word': index === 0, 'hr-word': index === 1, 'strategy-word': index === 2 }"
+          <span class="animated-word" :class="{ active: currentWordIndex === index }"
                 v-for="(word, index) in words" :key="index">
             {{ word }}
           </span>
         </div>
 
         <p class="text-xl opacity-90 mb-10 max-w-2xl mx-auto">
-          At Solid Rock Business Solutions, we deliver integrated Finance, Compensation and Benefits solutions that are practical, tailored, and directly aligned to strategy execution driving measurable, sustainable results.
+          At Solid Rock Strategic Business Solutions, we deliver integrated Compensation and Benefits solutions that are practical, tailored, and directly aligned to strategy execution driving measurable, sustainable results.
         </p>
 
         <div class="flex flex-col sm:flex-row justify-center gap-4">
@@ -35,7 +35,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 
-const words = ref(['FINANCE SOLUTIONS', 'COMPENSATION & BENEFITS', 'STRATEGY'])
+const words = ref(['COMPENSATION & BENEFITS', 'RETIREMENT FUNDS', 'BENEFICIARY TRACING'])
 const currentWordIndex = ref(0)
 
 let interval
@@ -90,17 +90,9 @@ onUnmounted(() => {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-/* Different colors for each animated word */
-.finance-word {
-  color: #0d9488; /* aquamarine */
-}
-
-.hr-word {
-  color: #3b82f6;
-}
-
-.strategy-word {
-  color: #f59e0b; /* amber/yellow */
+/* Animated word color */
+.animated-word.active {
+  color: #10b981; /* aquamarine - primary brand color */
 }
 
 .fade-in {

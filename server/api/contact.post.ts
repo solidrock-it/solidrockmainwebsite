@@ -312,7 +312,7 @@ export default defineEventHandler(async (event: H3Event) => {
         <body>
           <div class="container">
             <div class="header">
-              <div class="logo">Solid Rock Business Solutions</div>
+              <div class="logo">Solid Rock Strategic Business Solutions</div>
               <h1 class="title">New Contact Form Submission</h1>
             </div>
 
@@ -348,22 +348,22 @@ export default defineEventHandler(async (event: H3Event) => {
                 </div>
                 <div class="contact-item">
                   <div class="contact-label">PHONE</div>
-                  <div class="contact-value">083 387 9951 / 082 793 9655</div>
+                  <div class="contact-value">082 793 9655</div>
                 </div>
                 <div class="contact-item">
                   <div class="contact-label">ADDRESS</div>
-                  <div class="contact-value">Edenvale, Johannesburg, South Africa</div>
+                  <div class="contact-value">Centurion, South Africa</div>
                 </div>
               </div>
 
               <div class="disclaimer">
-                This email was automatically generated from the Solid Rock Business Solutions contact form. Please do not reply directly to this email.
+                This email was automatically generated from the Solid Rock Strategic Business Solutions contact form. Please do not reply directly to this email.
               </div>
             </div>
 
             <div class="footer">
-              <p>&copy; 2026 Solid Rock Business Solutions. All rights reserved.</p>
-              <p style="margin-top: 10px;">Transforming businesses with integrated Finance and HR solutions</p>
+              <p>&copy; 2026 Solid Rock Strategic Business Solutions. All rights reserved.</p>
+              <p style="margin-top: 10px;">Transforming businesses with integrated Compensation and Benefits solutions</p>
             </div>
           </div>
         </body>
@@ -393,15 +393,15 @@ export default defineEventHandler(async (event: H3Event) => {
       --------------------------------------------------
       CONTACT INFORMATION:
       Email: info@solid-rock.co.za
-      Phone: 083 387 9951 / 082 793 9655
-      Address: Edenvale, Johannesburg, South Africa
+      Phone: 082 793 9655
+      Address: Centurion, South Africa
       --------------------------------------------------
       
-      This email was automatically generated from the Solid Rock Business Solutions contact form.
+      This email was automatically generated from the Solid Rock Strategic Business Solutions contact form.
       Please do not reply directly to this email.
       
-      © 2026 Solid Rock Business Solutions. All rights reserved.
-      Transforming businesses with integrated Finance and HR solutions
+      © 2026 Solid Rock Strategic Business Solutions. All rights reserved.
+      Transforming businesses with integrated Compensation and Benefits solutions
     `;
 
     // Determine the recipient email address

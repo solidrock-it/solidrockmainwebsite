@@ -48,10 +48,10 @@
         >
           <option value="" disabled>Select a subject</option>
           <option value="general">General Inquiry</option>
-          <option value="finance">Finance Solutions</option>
           <option value="compensation">Compensation & Benefits</option>
           <option value="retirement">Retirement Funds</option>
           <option value="beneficiary">Beneficiary Tracing</option>
+          <option value="remuneration">Remuneration Services</option>
           <option value="other">Other</option>
         </select>
       </div>

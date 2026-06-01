@@ -1,6 +1,6 @@
-# Solid Rock Business Solutions Website
+# Solid Rock Strategic Business Solutions Website
 
-Professional website for Solid Rock Business Solutions, delivering integrated Finance and HR solutions.
+Professional website for Solid Rock Strategic Business Solutions, delivering integrated Compensation and Benefits solutions.
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 

@@ -14,7 +14,7 @@ definePageMeta({
 })
 
 useHead({
-  title: 'Error - Solid Rock Business Solutions',
+  title: 'Error - Solid Rock Strategic Business Solutions',
 })
 </script>
 

@@ -5,7 +5,7 @@
         <h2 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">What Our Clients Say</h2>
         <div class="h-1 w-20 bg-trust-blue-600 mx-auto"></div>
         <p class="text-lg text-gray-600 dark:text-gray-400 mt-6 max-w-3xl mx-auto">
-          Hear from businesses that have transformed their Finance, Compensation and Benefits operations with our solutions.
+          Hear from businesses that have transformed their Compensation and Benefits operations with our solutions.
         </p>
       </div>
 
@@ -37,7 +37,7 @@ const testimonials = [
   {
     name: 'John Smith',
     role: 'CEO, TechCorp',
-    quote: 'Solid Rock Business Solutions helped us streamline our compensation and benefits processes and strengthen our financial controls. Their integrated approach saved us time and improved our bottom line.'
+    quote: 'Solid Rock Strategic Business Solutions helped us streamline our compensation and benefits processes and strengthen our financial controls. Their integrated approach saved us time and improved our bottom line.'
   },
   {
     name: 'Sarah Johnson',
