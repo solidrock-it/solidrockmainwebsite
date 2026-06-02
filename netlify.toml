@@ -2,7 +2,8 @@
 
 [build]
   # Build command for Nuxt 4 static generation
-  command = "pnpm generate"
+  # Updated to allow lockfile update to match overrides
+  command = "pnpm install --no-frozen-lockfile && pnpm generate"
   # Output directory for static files
   publish = "dist"
 
